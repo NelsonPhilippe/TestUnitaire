@@ -1,0 +1,18 @@
+{
+  "name": "testunitaire",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start" : "node index.js",
+    "test": "c8 --100 mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "c8": "^7.12.0",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0"
+  }
+}
