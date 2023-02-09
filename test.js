@@ -44,13 +44,25 @@ describe('Test sorting', () => {
 
 describe('Test chessboard', () => {
     describe('#chessboard()', () => {
+
+        const lines = chessboard().split('\n');
+
         it('check if chars is correct', () => {
-            const chess = chessboard();
-            const lines = chess.split('\n');
 
             lines.forEach((line) => {
                 except(line).that.match(/^[#_]/g);
             });
         });
+
+        it('check if contain all char number', () => {
+            except(chessboard().replace(/\r?\n|\r/g, '')).to.length(7*7);
+        });
+
+        it('check if is alternate char', () => {
+            lines.forEach((line) => {
+                except(line).that.match(/.*/i);
+            });
+        });
     });
+
 });
